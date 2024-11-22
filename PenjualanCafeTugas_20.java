@@ -2,8 +2,8 @@ package Pertemuan13;
 import java.util.Scanner;
 
 public class PenjualanCafeTugas_20 {
-    static int[][] jmlPenjualan = new int[5][7];
-    static String[] namaMenu = {"Kopi", "Teh", "Es Degan", "Roti Bakar", "Gorengan"};
+    static int[][] jmlPenjualan;
+    static String[] namaMenu;
 
     public static void inputDataPenjualan() {
         Scanner sc = new Scanner(System.in);
@@ -15,6 +15,16 @@ public class PenjualanCafeTugas_20 {
             }
             System.out.println();
         }
+    }
+
+    public static void inputDataMenu(int jmlMenu) {
+        Scanner sc = new Scanner(System.in);
+
+        for (int i = 0; i < jmlMenu; i++) {
+            System.out.print("Masukkan menu ke-" +(i+1)+ " : ");
+            namaMenu[i] = sc.nextLine();
+        }
+        
     }
 
     public static void tampilkanData() {
@@ -63,6 +73,18 @@ public class PenjualanCafeTugas_20 {
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah menu : ");
+        int jmlMenu = sc.nextInt();
+        System.out.print("Masukkan jumlah hari : ");
+        int jmlHari = sc.nextInt();
+        System.out.println();
+
+        jmlPenjualan = new int[jmlMenu][jmlHari];
+        namaMenu = new String[jmlMenu];
+
+        inputDataMenu(jmlMenu);
         inputDataPenjualan();
         tampilkanData();
         penjualanTertinggi();
