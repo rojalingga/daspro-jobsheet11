@@ -27,9 +27,13 @@ public class PenjualanCafeTugas_20 {
         
     }
 
-    public static void tampilkanData() {
+    public static void tampilkanData(int jmlHari) {
         System.out.println("Data Jumlah Penjualan : ");
-        System.out.println("Menu\t\tH1\tH2\tH3\tH4\tH5\tH6\tH7");
+        System.out.print("Menu\t");
+        for (int i = 0; i < jmlHari; i++) {
+            System.out.print("\tH"+ (i+1));
+        }
+        System.out.println();
         for (int i = 0; i < jmlPenjualan.length; i++) {
             System.out.print(namaMenu[i] + "\t");
             if (namaMenu[i].length() < 8)
@@ -86,7 +90,7 @@ public class PenjualanCafeTugas_20 {
 
         inputDataMenu(jmlMenu);
         inputDataPenjualan();
-        tampilkanData();
+        tampilkanData(jmlHari);
         penjualanTertinggi();
         rataRataPerMenu();
     }
