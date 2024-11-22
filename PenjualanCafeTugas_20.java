@@ -8,9 +8,9 @@ public class PenjualanCafeTugas_20 {
     public static void inputDataPenjualan() {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < jmlPenjualan.length; i++) {
-            System.out.println("Masukkan Jumlah Penjualan untuk " +namaMenu[i]+ " (minggu 1 - 7) : ");
+            System.out.println("Masukkan Jumlah Penjualan untuk " +namaMenu[i]+ " : ");
             for (int j = 0; j < jmlPenjualan[i].length; j++) {
-                System.out.print("Minggu ke-" + (j+1) + " : ");
+                System.out.print("Hari ke-" + (j+1) + " : ");
                 jmlPenjualan[i][j] = sc.nextInt();
             }
             System.out.println();
@@ -58,7 +58,7 @@ public class PenjualanCafeTugas_20 {
                 total += jmlPenjualan[i][j];
             }
             double rata = total / jmlPenjualan[i].length;
-            System.out.printf("Rata-rata penjualan menu %s dalam %d minggu: %.2f%n", namaMenu[i], jmlPenjualan[i].length, rata);
+            System.out.printf("Rata-rata penjualan menu %s dalam %d hari: %.2f%n", namaMenu[i], jmlPenjualan[i].length, rata);
         }
     }
 
