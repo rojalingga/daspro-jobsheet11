@@ -26,5 +26,6 @@ public class Percobaan6_20 {
         
         System.out.println("Luas Persegi Panjang adalah "+ hitungLuas(panjang, lebar));
         System.out.println("Volume Balok adalah "+ hitungVolume(tinggi, panjang, lebar));
+
     }
 }
