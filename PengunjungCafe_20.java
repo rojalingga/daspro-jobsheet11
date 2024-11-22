@@ -3,9 +3,9 @@ package Pertemuan13;
 public class PengunjungCafe_20 {
 
     public static void daftarPengunjung(String... namaPengunjung) {
-        System.out.println("Daftar Nama Pengunjung:");
-        for (int i = 0; i < namaPengunjung.length; i++) {
-            System.out.println("- " + namaPengunjung[i]);
+        System.out.println("Daftar Nama Pengunjung (with for-each):");
+        for (String nama : namaPengunjung) {
+            System.out.println("- " + nama);
         }
     }
 
